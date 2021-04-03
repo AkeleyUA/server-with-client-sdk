@@ -1,8 +1,8 @@
 import { BASE_URL } from '../common';
-import { TLoginBody, TLoginRespone } from '../common/types';
+import { TLoginBody, IUser } from '../common/types';
 
 export default class AuthSDK {
-  static async login(body: TLoginBody): Promise<TLoginRespone> {
+  static async login(body: TLoginBody): Promise<IUser> {
     return fetch(`${BASE_URL}`, {
       method: 'POST',
       headers: {

@@ -1,9 +1,9 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { IUser, TLoginBody, TLoginRespone } from './client/common/types';
+import { IServerUser, IUser, TLoginBody } from './client/common/types';
 
 @Injectable()
 export class AppService {
-  users: IUser[] = [
+  users: IServerUser[] = [
     {
       id: 1,
       email: 'test@1.com',
@@ -26,7 +26,7 @@ export class AppService {
     },
   ];
 
-  login({ email, password }: TLoginBody): TLoginRespone {
+  login({ email, password }: TLoginBody): IUser {
     const find = this.users.find(
       (user) => user.email === email && user.password === password,
     );

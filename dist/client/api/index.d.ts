@@ -1,4 +1,4 @@
-import { TLoginBody, TLoginRespone } from '../common/types';
+import { TLoginBody, IUser } from '../common/types';
 export default class AuthSDK {
-    static login(body: TLoginBody): Promise<TLoginRespone>;
+    static login(body: TLoginBody): Promise<IUser>;
 }

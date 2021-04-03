@@ -1,5 +1,5 @@
-import { IUser, TLoginBody, TLoginRespone } from './client/common/types';
+import { IServerUser, IUser, TLoginBody } from './client/common/types';
 export declare class AppService {
-    users: IUser[];
-    login({ email, password }: TLoginBody): TLoginRespone;
+    users: IServerUser[];
+    login({ email, password }: TLoginBody): IUser;
 }
