@@ -1392,7 +1392,7 @@
         "affectsGlobalScope": false
       },
       "../src/client/api/index.ts": {
-        "version": "0429ade30f02d42e96e3bd18a4a72b31bd85cb1e2d88f72a4f6a1b62d7dff679",
+        "version": "31c14d1662988037d24c9d305698582f34adc58d9d9792e565d9736321d45d0f",
         "signature": "cc1841f0067095fe63d8aa85991da00d14bb64a59d5593d7633b5b96246f01e2",
         "affectsGlobalScope": false
       },

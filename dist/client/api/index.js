@@ -10,7 +10,9 @@ class AuthSDK {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(body),
-        }).then((res) => res.json());
+        })
+            .then((res) => res.json())
+            .catch((err) => err.message);
     }
 }
 exports.default = AuthSDK;
