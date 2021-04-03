@@ -1397,8 +1397,8 @@
         "affectsGlobalScope": false
       },
       "../src/client/index.ts": {
-        "version": "b3fc6647c8ea322f8857d2e575d1963bcb3e64bfffd231c6035996cda9ed5f84",
-        "signature": "4246438f701c6a2238a19a612c979d454d04a10accba5d96bf0ae4c96eb90cc0",
+        "version": "1fd16c16515e181d821b1b0c9224b715d2a634c7bb2c7b7f5559edd6e5b841a1",
+        "signature": "5d2f061b0f8b5ba4a1b9acabc7e20dd2e5bf498afbbeec5abc785e6ba2fcce49",
         "affectsGlobalScope": false
       },
       "../node_modules/@babel/types/lib/index.d.ts": {
