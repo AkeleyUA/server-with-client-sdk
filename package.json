@@ -8,7 +8,7 @@
   "main": "./dist/client/index.js",
   "types": "./dist/client/index.d.ts",
   "files": [
-    "./dist/client/"
+    "dist/client/"
   ],
   "scripts": {
     "prebuild": "rimraf dist",
