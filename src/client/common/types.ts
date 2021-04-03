@@ -11,3 +11,5 @@ export type TLoginBody = {
   email: IServerUser['email'];
   password: IServerUser['password'];
 };
+
+export type TResponseWithError = { message: string };

@@ -1,5 +1,5 @@
 import { BASE_URL } from '../common';
-import { TLoginBody, IUser } from '../common/types';
+import { TLoginBody, IUser, TResponseWithError } from '../common/types';
 
 export default class AuthSDK {
   static async login(body: TLoginBody): Promise<IUser> {
@@ -12,6 +12,6 @@ export default class AuthSDK {
       body: JSON.stringify(body),
     })
       .then((res) => res.json())
-      .catch((err) => err.message);
+      .catch<TResponseWithError>((err) => err.message);
   }
 }

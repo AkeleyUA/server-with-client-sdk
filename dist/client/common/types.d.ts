@@ -9,3 +9,6 @@ export declare type TLoginBody = {
     email: IServerUser['email'];
     password: IServerUser['password'];
 };
+export declare type TResponseWithError = {
+    message: string;
+};
