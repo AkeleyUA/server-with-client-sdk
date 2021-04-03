@@ -1,2 +1,4 @@
 import { IUser } from '../common/types';
-export declare const getUser: () => Promise<IUser>;
+export default class AuthSDK {
+    static getUser(): Promise<IUser>;
+}
