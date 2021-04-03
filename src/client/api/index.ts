@@ -3,7 +3,7 @@ import { TLoginBody, IUser, TResponseWithError } from '../common/types';
 
 export default class AuthSDK {
   static async login(body: TLoginBody): Promise<IUser> {
-    try {
+    return new Promise(async (resolve, reject) => {
       const res = await fetch(`${BASE_URL}`, {
         method: 'POST',
         headers: {
@@ -14,13 +14,11 @@ export default class AuthSDK {
       });
       if (res.ok) {
         const data: IUser = await res.json();
-        return data;
+        resolve(data);
       } else {
         const { message }: TResponseWithError = await res.json();
-        throw new Error(message);
+        reject(message);
       }
-    } catch (err) {
-      throw new Error(err.message);
-    }
+    });
   }
 }

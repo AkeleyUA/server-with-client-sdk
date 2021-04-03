@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("../common");
 class AuthSDK {
     static async login(body) {
-        try {
+        return new Promise(async (resolve, reject) => {
             const res = await fetch(`${common_1.BASE_URL}`, {
                 method: 'POST',
                 headers: {
@@ -14,16 +14,13 @@ class AuthSDK {
             });
             if (res.ok) {
                 const data = await res.json();
-                return data;
+                resolve(data);
             }
             else {
                 const { message } = await res.json();
-                throw new Error(message);
+                reject(message);
             }
-        }
-        catch (err) {
-            throw new Error(err.message);
-        }
+        });
     }
 }
 exports.default = AuthSDK;
