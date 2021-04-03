@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppController = void 0;
 const common_1 = require("@nestjs/common");
 const app_service_1 = require("./app.service");
+const types_1 = require("./client/common/types");
 let AppController = class AppController {
     constructor(appService) {
         this.appService = appService;
@@ -27,7 +28,7 @@ __decorate([
     common_1.Post(),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
+    __metadata("design:paramtypes", [types_1.TLoginBody]),
     __metadata("design:returntype", Object)
 ], AppController.prototype, "getHello", null);
 AppController = __decorate([
