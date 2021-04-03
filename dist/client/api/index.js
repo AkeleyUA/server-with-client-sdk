@@ -12,7 +12,9 @@ class AuthSDK {
             body: JSON.stringify(body),
         })
             .then((res) => res.json())
-            .catch((err) => err.message);
+            .catch((err) => {
+            throw new Error(err.message);
+        });
     }
 }
 exports.default = AuthSDK;

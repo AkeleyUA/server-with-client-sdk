@@ -12,6 +12,8 @@ export default class AuthSDK {
       body: JSON.stringify(body),
     })
       .then((res) => res.json())
-      .catch<TResponseWithError>((err) => err.message);
+      .catch<TResponseWithError>((err) => {
+        throw new Error(err.message);
+      });
   }
 }
